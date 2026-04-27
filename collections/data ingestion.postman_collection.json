@@ -1,0 +1,68 @@
+{
+  "info": {
+    "_postman_id": "846ed34e-2ed2-4ed1-8191-a96cb8c88c1c",
+    "name": "data ingestion",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18846709"
+  },
+  "item": [
+    {
+      "name": "create custom metric",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "jwt eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxMjQ4NDM5LCJpYXQiOjE3NzEyNDc1MzksImp0aSI6IjRjZGVhMmRiYmI0ZDQxNjZiYzM1MDhjMjYwZGQ1YzY4IiwidXNlcl9pZCI6MjMzNiwic2Vzc2lvbiI6MzMzMDU3LCJ3b3Jrc3BhY2VfaWQiOjI1MSwibG9naW5fYXBwIjoiYXJtIn0.sXEarzjJzatCHQkx_2Cn8-fktSzZ8F-6Be6CIFNedXE9GVm9qC0Q4TS1iuN8vwJSJ4M04dRb1rAQbih2wkLEBmsUmow1rz2eBYdhB3Sx3Zbbl20annQfDQIlmIetS_H2WRwvXuZTurXSkNLBakby5muBnOqybDaBbCnTMSLce8PzE3nhS-jCOtdYvnKhO63D6rCgB9KFPGyRzKXPhpHGVgvqlzCagAT_-sWwbzC23yuxxgaviqspPLax9SMzYj2jZtae9uDU6-ry54v_IFhoaZj2NEQPku1rsOup-MPlUrdrLD4jWLhkyF2djwpvaWw3iK4J4L_KV2PTFgtBFh24uQ",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"label\": \"{{$guid}}\",\r\n    \"metric_type\": \"number\",\r\n    \"is_date_validation_ignored\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://arm.uat2.mint.ai/api/data-ingestion/custom-metrics/",
+          "protocol": "https",
+          "host": [
+            "arm",
+            "uat2",
+            "mint",
+            "ai"
+          ],
+          "path": [
+            "api",
+            "data-ingestion",
+            "custom-metrics",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "editable_custom_metric_filter",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
