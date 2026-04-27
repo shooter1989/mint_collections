@@ -1,0 +1,75 @@
+{
+  "info": {
+    "_postman_id": "c5cef12f-68e5-44b7-95bc-2271e5b86ad6",
+    "name": "DEMO",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18846709"
+  },
+  "item": [
+    {
+      "name": "create Demo workspace",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"company\": {\r\n    \"name\": \"B&G demo\",\r\n    \"license\": \"ENTERPRISE\",\r\n    \"currency\": \"USD\",\r\n    \"dashboard_url\": \"/pivot/c/Demo_%s_uat/Demo_%s_uat\"\r\n  },\r\n  \"users\": [\r\n    {\r\n      \"email\": \"vladyslav.shusta+demo101@mint.ai\",\r\n      \"first_name\": \"Demo1\",\r\n      \"last_name\": \"Demo1\",\r\n      \"role_type\": \"owner_role_type\"\r\n    },\r\n    {\r\n      \"email\": \"vladyslav.shusta@mint.ai\",\r\n      \"first_name\": \"Demo2\",\r\n      \"last_name\": \"Demo2\",\r\n      \"role_type\": \"viewer_role_type\"\r\n    },\r\n    {\r\n      \"email\": \"vladyslav.shusta+hotfix@mint.ai\",\r\n      \"first_name\": \"Demo2\",\r\n      \"last_name\": \"Demo2\",\r\n      \"role_type\": \"viewer_role_type\"\r\n    }\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"name\": \"Demo tag\",\r\n      \"type\": \"brands\",\r\n      \"campaign_collections\": [\r\n        2216,\r\n        3133,\r\n        3134,\r\n        3135,\r\n        3136\r\n      ],\r\n      \"sub_tags\": null\r\n    },\r\n    {\r\n      \"name\": \"EMEA\",\r\n      \"type\": \"geographies\",\r\n      \"campaign_collections\": [\r\n        2216,\r\n        3133,\r\n        3134,\r\n        3135,\r\n        3136\r\n      ],\r\n      \"sub_tags\": [\r\n        {\r\n          \"name\": \"Italy\",\r\n          \"type\": \"geographies\",\r\n          \"campaign_collections\": [\r\n            3133,\r\n            3135\r\n          ],\r\n          \"sub_tags\": null\r\n        },\r\n        {\r\n          \"name\": \"France\",\r\n          \"type\": \"geographies\",\r\n          \"campaign_collections\": null,\r\n          \"sub_tags\": null\r\n        },\r\n        {\r\n          \"name\": \"Germany\",\r\n          \"type\": \"geographies\",\r\n          \"campaign_collections\": null,\r\n          \"sub_tags\": null\r\n        },\r\n        {\r\n          \"name\": \"UK\",\r\n          \"type\": \"geographies\",\r\n          \"campaign_collections\": [\r\n            3134,\r\n            3136\r\n          ],\r\n          \"sub_tags\": null\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"LATAM\",\r\n      \"type\": \"geographies\",\r\n      \"campaign_collections\": [\r\n        2216\r\n      ],\r\n      \"sub_tags\": [\r\n        {\r\n          \"name\": \"Argentina\",\r\n          \"type\": \"geographies\",\r\n          \"campaign_collections\": null,\r\n          \"sub_tags\": null\r\n        },\r\n        {\r\n          \"name\": \"Brazil\",\r\n          \"type\": \"geographies\",\r\n          \"campaign_collections\": null,\r\n          \"sub_tags\": null\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"NAM\",\r\n      \"type\": \"geographies\",\r\n      \"campaign_collections\": [\r\n        2216\r\n      ],\r\n      \"sub_tags\": [\r\n        {\r\n          \"name\": \"USA\",\r\n          \"type\": \"geographies\",\r\n          \"campaign_collections\": null,\r\n          \"sub_tags\": null\r\n        },\r\n        {\r\n          \"name\": \"Canada\",\r\n          \"type\": \"geographies\",\r\n          \"campaign_collections\": null,\r\n          \"sub_tags\": null\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"APAC\",\r\n      \"type\": \"geographies\",\r\n      \"campaign_collections\": [\r\n        2216\r\n      ],\r\n      \"sub_tags\": [\r\n        {\r\n          \"name\": \"India\",\r\n          \"type\": \"geographies\",\r\n          \"campaign_collections\": null,\r\n          \"sub_tags\": null\r\n        },\r\n        {\r\n          \"name\": \"Australia\",\r\n          \"type\": \"geographies\",\r\n          \"campaign_collections\": null,\r\n          \"sub_tags\": null\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://authentication/_api/authentication/v1/demo/",
+          "protocol": "http",
+          "host": [
+            "authentication"
+          ],
+          "path": [
+            "_api",
+            "authentication",
+            "v1",
+            "demo",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET x-internal-authorization",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://authentication/auth/",
+          "protocol": "http",
+          "host": [
+            "authentication"
+          ],
+          "path": [
+            "auth",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
