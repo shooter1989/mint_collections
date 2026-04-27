@@ -14,13 +14,13 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "REDACTED",
+            "value": "{{token}}",
             "type": "text"
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"expression\": \"SUM(clicks)\",\r\n    \"isPublic\": false,\r\n    \"metricFormat\": \"number\",\r\n    \"hasAccessToFin\": false,\r\n    \"name\": [\r\n        {\r\n            \"name\": \"privat click test\",\r\n            \"language\": \"en\"\r\n        }\r\n    ]\r\n}",
+          "raw": "{\r\n    \"expression\": \"SUM(clicks)\",\r\n    \"isPublic\": false,\r\n    \"metricFormat\": \"number\",\r\n    \"hasAccessToFin\": false,\r\n    \"names\": [\r\n        {\r\n            \"name\": \"private clicks test_test_migration\",\r\n            \"language\": \"en\"\r\n        }\r\n    ]\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -50,7 +50,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "REDACTED",
+            "value": "{{token}}",
             "type": "text"
           }
         ],

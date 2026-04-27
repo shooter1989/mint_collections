@@ -16,7 +16,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "REDACTED",
+            "value": "{{token}}",
             "type": "text"
           }
         ],
@@ -52,7 +52,62 @@
       "name": "editable_custom_metric_filter",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://data-ingestion/_api/data-ingestion/:{{workspace_id}}/custom-metrics/editability/?field_definition_id=metric_10&field_definition_id=super_new_metric&field_definition_id=super_new_metric&field_definition_id=frequency&field_definition_id=not_such_metric",
+          "protocol": "http",
+          "host": [
+            "data-ingestion"
+          ],
+          "path": [
+            "_api",
+            "data-ingestion",
+            ":{{workspace_id}}",
+            "custom-metrics",
+            "editability",
+            ""
+          ],
+          "query": [
+            {
+              "key": "field_definition_id",
+              "value": "metric_10"
+            },
+            {
+              "key": "field_definition_id",
+              "value": "super_new_metric"
+            },
+            {
+              "key": "field_definition_id",
+              "value": "super_new_metric"
+            },
+            {
+              "key": "field_definition_id",
+              "value": "frequency"
+            },
+            {
+              "key": "field_definition_id",
+              "value": "not_such_metric"
+            },
+            {
+              "key": "field_definition_id",
+              "value": "post_reactions",
+              "type": "text",
+              "disabled": true
+            }
+          ],
+          "variable": [
+            {
+              "key": "{{workspace_id}}",
+              "value": "8"
+            }
+          ]
+        }
       },
       "response": []
     },
