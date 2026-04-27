@@ -16,7 +16,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "jwt eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcxMjQ4NDM5LCJpYXQiOjE3NzEyNDc1MzksImp0aSI6IjRjZGVhMmRiYmI0ZDQxNjZiYzM1MDhjMjYwZGQ1YzY4IiwidXNlcl9pZCI6MjMzNiwic2Vzc2lvbiI6MzMzMDU3LCJ3b3Jrc3BhY2VfaWQiOjI1MSwibG9naW5fYXBwIjoiYXJtIn0.sXEarzjJzatCHQkx_2Cn8-fktSzZ8F-6Be6CIFNedXE9GVm9qC0Q4TS1iuN8vwJSJ4M04dRb1rAQbih2wkLEBmsUmow1rz2eBYdhB3Sx3Zbbl20annQfDQIlmIetS_H2WRwvXuZTurXSkNLBakby5muBnOqybDaBbCnTMSLce8PzE3nhS-jCOtdYvnKhO63D6rCgB9KFPGyRzKXPhpHGVgvqlzCagAT_-sWwbzC23yuxxgaviqspPLax9SMzYj2jZtae9uDU6-ry54v_IFhoaZj2NEQPku1rsOup-MPlUrdrLD4jWLhkyF2djwpvaWw3iK4J4L_KV2PTFgtBFh24uQ",
+            "value": "{{token}}",
             "type": "text"
           }
         ],
@@ -52,7 +52,62 @@
       "name": "editable_custom_metric_filter",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://data-ingestion/_api/data-ingestion/:{{workspace_id}}/custom-metrics/editability/?field_definition_id=metric_10&field_definition_id=super_new_metric&field_definition_id=super_new_metric&field_definition_id=frequency&field_definition_id=not_such_metric",
+          "protocol": "http",
+          "host": [
+            "data-ingestion"
+          ],
+          "path": [
+            "_api",
+            "data-ingestion",
+            ":{{workspace_id}}",
+            "custom-metrics",
+            "editability",
+            ""
+          ],
+          "query": [
+            {
+              "key": "field_definition_id",
+              "value": "metric_10"
+            },
+            {
+              "key": "field_definition_id",
+              "value": "super_new_metric"
+            },
+            {
+              "key": "field_definition_id",
+              "value": "super_new_metric"
+            },
+            {
+              "key": "field_definition_id",
+              "value": "frequency"
+            },
+            {
+              "key": "field_definition_id",
+              "value": "not_such_metric"
+            },
+            {
+              "key": "field_definition_id",
+              "value": "post_reactions",
+              "type": "text",
+              "disabled": true
+            }
+          ],
+          "variable": [
+            {
+              "key": "{{workspace_id}}",
+              "value": "8"
+            }
+          ]
+        }
       },
       "response": []
     },

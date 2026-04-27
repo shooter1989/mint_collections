@@ -14,13 +14,13 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "jwt eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMTQxODkyLCJpYXQiOjE3NzMxNDAxMDMsImp0aSI6IjRjZDZhYTQ5NGY4YjQ1ODRiY2NjMzQzZTJmYjAxN2IzIiwidXNlcl9pZCI6MTUyNiwic2Vzc2lvbiI6MTQwMTM3LCJ3b3Jrc3BhY2VfaWQiOjQ5MSwibG9naW5fYXBwIjoiYXJtIn0.N1D_kGM7veH8fqKMVgjS04cdmCbYVCjo2p5Yvl9cV6DVw_U6fVSjCIg9YePNpb_-JXoBqSBKZLUugcpyrFvxAwxzzY6WdmHTU6l0OnmZTu6W_EIrtNcC7Ywlor0m9pxJF8QikLDQkHD--r5tNuCvGnvVAZFSGU_IWwjS5xFcjz_uJHNqWnX_OaJirBjEGyV-1eZUSGIVGFAs9lMLAhRQVe6EcWnznsp1EU9UdDQOc9ooTr3qhswOFGYiQAkzF3cDb9YM4Pi9u_t_DDWz8F-cHCGbQuSHrqwTH45BtO1qGKzeZehbrw6UTV39usrQr6qeXxsqjI-3sQsNEJ9ksWLSzA",
+            "value": "{{token}}",
             "type": "text"
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"expression\": \"SUM(clicks)\",\r\n    \"isPublic\": false,\r\n    \"metricFormat\": \"number\",\r\n    \"hasAccessToFin\": false,\r\n    \"name\": [\r\n        {\r\n            \"name\": \"privat click test\",\r\n            \"language\": \"en\"\r\n        }\r\n    ]\r\n}",
+          "raw": "{\r\n    \"expression\": \"SUM(clicks)\",\r\n    \"isPublic\": false,\r\n    \"metricFormat\": \"number\",\r\n    \"hasAccessToFin\": false,\r\n    \"names\": [\r\n        {\r\n            \"name\": \"private clicks test_test_migration\",\r\n            \"language\": \"en\"\r\n        }\r\n    ]\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -50,7 +50,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "jwt eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMTQ3OTQ1LCJpYXQiOjE3NzMxNDYxODQsImp0aSI6IjRlMDY3MDc2NTU2ZjRjOGI5ZDYzYzNlNDhmMzIxMDUwIiwidXNlcl9pZCI6MTUyNiwic2Vzc2lvbiI6MTQwMTM3LCJ3b3Jrc3BhY2VfaWQiOjQ5MSwibG9naW5fYXBwIjoiYXJtIn0.bg9fd-B1OEX1ipMn2xKw-DFzs96Q2PcatGP6AYMCZatSAGegZRHJ8gYVL6IQB8YdTxWUzvwBLSK0WLRlN25-tO6DU6d_4De0nfW-r5omf6g3N3jcnNev2b89DjZUjYvlWHTC9DXfePu5aZ6yTZ4fHh6QDguwm5jhZZAHm1OksDhqimzpQvV8JupwHwTUB1sR8bDlyqrrCPLLd_uz984P9Wwhia3itVPQ7d4LNZDbfyDh-dXP1MBNIoHjPvPPSWnPAfz_CdPrNbf8b4sU5Jl3ixA12ZXzakmxNtyCnGDnQhAAsvsdTrF3P3RwyisswReRI5nLVU80mN227x1hFRYtvg",
+            "value": "{{token}}",
             "type": "text"
           }
         ],

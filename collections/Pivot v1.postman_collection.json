@@ -10,7 +10,31 @@
       "name": "get metric",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}api/pivot-table/metrics/v2/:companyId",
+          "host": [
+            "{{base_url}}api"
+          ],
+          "path": [
+            "pivot-table",
+            "metrics",
+            "v2",
+            ":companyId"
+          ],
+          "variable": [
+            {
+              "key": "companyId",
+              "value": "225"
+            }
+          ]
+        }
       },
       "response": []
     },
@@ -21,7 +45,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "jwt eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMjM2MTM4LCJpYXQiOjE3NzMyMzI1MzgsImp0aSI6IjE4NmZiNTQ3ZGM4NDRhNzRiMTgyYmI2OTkxNDk2NWQ4IiwidXNlcl9pZCI6MzU3Nywic2Vzc2lvbiI6MzIzMDAzLCJ3b3Jrc3BhY2VfaWQiOjI1OCwibG9naW5fYXBwIjoiYXJtIn0.iA4YDiLkgt2aCE08zikObZNLW-_aUMIFgdHQ-H7RGPnAYPMS7aWs7-_gqI9CgAWVqaTSxaCwvM4ytz5dwSf3ZFILj_DHTv4h64atiGzGEv9uEC0XaLp3vMkpXibY7z2Ax4xwqsspDTyt4fdGeSw9lOwzGjUcsWqCV1nzP3rEaYRtpT9VhXz_jSfctm09swdK0xIM0UuTZEUrrVxkisodCbToc9IDhlk1nfBYKr3TF0RTdcnzLTyWBifMxPOmfJbwgPQ64qOc8DVNnZIoV-QZwEuDwVtPxv3MbFVd-TnQdGzKqPtVmtAVMxMqD-MdI_nw-Fbc9qfm61udD3KoTdPhwA",
+            "value": "{{token}}",
             "type": "text"
           }
         ],
@@ -57,12 +81,12 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "jwt eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMjM2MTM4LCJpYXQiOjE3NzMyMzI1MzgsImp0aSI6IjE4NmZiNTQ3ZGM4NDRhNzRiMTgyYmI2OTkxNDk2NWQ4IiwidXNlcl9pZCI6MzU3Nywic2Vzc2lvbiI6MzIzMDAzLCJ3b3Jrc3BhY2VfaWQiOjI1OCwibG9naW5fYXBwIjoiYXJtIn0.iA4YDiLkgt2aCE08zikObZNLW-_aUMIFgdHQ-H7RGPnAYPMS7aWs7-_gqI9CgAWVqaTSxaCwvM4ytz5dwSf3ZFILj_DHTv4h64atiGzGEv9uEC0XaLp3vMkpXibY7z2Ax4xwqsspDTyt4fdGeSw9lOwzGjUcsWqCV1nzP3rEaYRtpT9VhXz_jSfctm09swdK0xIM0UuTZEUrrVxkisodCbToc9IDhlk1nfBYKr3TF0RTdcnzLTyWBifMxPOmfJbwgPQ64qOc8DVNnZIoV-QZwEuDwVtPxv3MbFVd-TnQdGzKqPtVmtAVMxMqD-MdI_nw-Fbc9qfm61udD3KoTdPhwA",
+            "value": "{{token}}",
             "type": "text"
           }
         ],
         "url": {
-          "raw": "{{base_url}}/api/pivot-table/custom/metrics/v1/grant/access/d63bee59-a412-4b47-a9a2-537244cdfbb4/company/258",
+          "raw": "{{base_url}}/api/pivot-table/custom/metrics/v1/grant/access/af9b66b9-6175-4d7a-96e4-649e311298fb/company/261",
           "host": [
             "{{base_url}}"
           ],
@@ -74,9 +98,9 @@
             "v1",
             "grant",
             "access",
-            "d63bee59-a412-4b47-a9a2-537244cdfbb4",
+            "af9b66b9-6175-4d7a-96e4-649e311298fb",
             "company",
-            "258"
+            "261"
           ]
         }
       },
@@ -86,10 +110,16 @@
       "name": "add complex metric",
       "request": {
         "method": "PUT",
-        "header": [],
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"expression\": \"\",\r\n    \"isPublic\": false,\r\n    \"metricFormat\": \"number\",\r\n    \"names\": [\r\n        {\r\n            \"name\": \"\",\r\n            \"language\": \"en\"\r\n        }\r\n    ]\r\n}",
+          "raw": "{\r\n    \"expression\": \"6e078694-6958-4a2c-acde-777ad42796bf / 8fe81617-d9e1-4a61-af0b-a873e22c1037\",\r\n    \"isPublic\": true,\r\n    \"metricFormat\": \"number\",\r\n    \"names\": [\r\n        {\r\n            \"name\": \"Clicks/Budget spend 2\",\r\n            \"language\": \"en\"\r\n        }\r\n    ]\r\n}",
           "options": {
             "raw": {
               "language": "json"
