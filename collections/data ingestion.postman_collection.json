@@ -1,0 +1,68 @@
+{
+  "info": {
+    "_postman_id": "846ed34e-2ed2-4ed1-8191-a96cb8c88c1c",
+    "name": "data ingestion",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18846709"
+  },
+  "item": [
+    {
+      "name": "create custom metric",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "REDACTED",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"label\": \"{{$guid}}\",\r\n    \"metric_type\": \"number\",\r\n    \"is_date_validation_ignored\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://arm.uat2.mint.ai/api/data-ingestion/custom-metrics/",
+          "protocol": "https",
+          "host": [
+            "arm",
+            "uat2",
+            "mint",
+            "ai"
+          ],
+          "path": [
+            "api",
+            "data-ingestion",
+            "custom-metrics",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "editable_custom_metric_filter",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
