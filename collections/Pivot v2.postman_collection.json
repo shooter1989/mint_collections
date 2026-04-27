@@ -91,7 +91,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "REDACTED",
+            "value": "jwt eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMTQxODkyLCJpYXQiOjE3NzMxNDAxMDMsImp0aSI6IjRjZDZhYTQ5NGY4YjQ1ODRiY2NjMzQzZTJmYjAxN2IzIiwidXNlcl9pZCI6MTUyNiwic2Vzc2lvbiI6MTQwMTM3LCJ3b3Jrc3BhY2VfaWQiOjQ5MSwibG9naW5fYXBwIjoiYXJtIn0.N1D_kGM7veH8fqKMVgjS04cdmCbYVCjo2p5Yvl9cV6DVw_U6fVSjCIg9YePNpb_-JXoBqSBKZLUugcpyrFvxAwxzzY6WdmHTU6l0OnmZTu6W_EIrtNcC7Ywlor0m9pxJF8QikLDQkHD--r5tNuCvGnvVAZFSGU_IWwjS5xFcjz_uJHNqWnX_OaJirBjEGyV-1eZUSGIVGFAs9lMLAhRQVe6EcWnznsp1EU9UdDQOc9ooTr3qhswOFGYiQAkzF3cDb9YM4Pi9u_t_DDWz8F-cHCGbQuSHrqwTH45BtO1qGKzeZehbrw6UTV39usrQr6qeXxsqjI-3sQsNEJ9ksWLSzA",
             "type": "text"
           }
         ],
@@ -116,6 +116,14 @@
             }
           ]
         }
+      },
+      "response": []
+    },
+    {
+      "name": "1",
+      "request": {
+        "method": "GET",
+        "header": []
       },
       "response": []
     }
